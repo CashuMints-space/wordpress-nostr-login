@@ -14,6 +14,10 @@ if (!defined('ABSPATH')) {
 function nostr_login_enqueue_scripts() {
     wp_enqueue_script('nostr-login', 'https://www.unpkg.com/nostr-login@latest/dist/unpkg.js', array(), null, true);
     wp_enqueue_script('nostr-login-custom', plugins_url('assets/js/nostr-login.js', __FILE__), array('nostr-login'), null, true);
+
+    wp_localize_script('nostr-login-custom', 'nostrLoginAjax', array(
+        'ajaxurl' => admin_url('admin-ajax.php')
+    ));
 }
 add_action('wp_enqueue_scripts', 'nostr_login_enqueue_scripts');
 
