@@ -1,5 +1,3 @@
-# wordpress-nostr-login
-
 # Nostr Login for WordPress
 
 **Nostr Login** is a WordPress plugin that allows users to log in using the Nostr decentralized identity system.
